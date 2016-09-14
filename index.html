@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blank Starter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<html ng-app="ionicApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>Ionic Pull to Refresh</title>
+
+    <link href="css/ionic.css" rel="stylesheet">
+    <script src="js/ionic.bundle.js"></script>
+    <script src="js/ionic.bundle.js"></script>
+    <script src="js/minErr.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+<body ng-controller="MyCtrl">
+
+<ion-header-bar class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-back" ng-click="">
+        </button>
+    </div>
+    <h1 class="title">Blank Starter</h1>
+</ion-header-bar>
+
+<ion-content class="padding">
+    <div class="list">
+        <label class="item item-input">
+            <span class="input-label">code</span>
+            <input ng-model="currentNumber" type="text" ng-click="showKeyBoard();"
+                   placeholder="click hree to show keyboard" readonly>
+            <div class="buttons">
+                <button class="button button-icon ion-camera">
+                </button>
+            </div>
+        </label>
+
+    </div>
+</ion-content>
+
+<script src="js/index.js"></script>
+
+<script id="templates/modal_number_keyboard.html" type="text/ng-template">
+    <style>
+        .modal-backdrop-bg {
+            -webkit-transition: opacity 300ms ease-in-out;
+            transition: opacity 300ms ease-in-out;
+            background-color: #000;
+            opacity: 0.5;
+        }
+
+        .activeColor {
+            color: #FF9800
+        }
+    </style>
+    <ion-modal-view style="top: 62%;min-height: 70%;    width: 100%;    left: 0;    right: 0;">
+        <ion-content class="no-padding">
+            <div class="row row-no-padding">
+                <div class="col-25">
+                    <div class="row row-no-padding">
+                        <button class="button button-full button-clear button-dark" ng-click="doInput(num.a);">
+                            1
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-full button-clear button-dark" ng-click="doInput(num.d);">
+                            4
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-full button-clear button-dark" ng-click="doInput(num.g);">
+                            7
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-full button-clear button-dark" ng-click="doInput(num.l);">
+                            重置
+                        </button>
+                    </div>
+                </div>
+                <div class="col-25" style="border-left:1px solid #ddd;">
+                    <div class="row row-no-padding">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.b);">
+                            2
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.e);">
+                            5
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.h);">
+                            8
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.j);">
+                            0
+                        </button>
+                    </div>
+                </div>
+                <div class="col-25" style="border-left:1px solid #ddd;">
+                    <div class="row row-no-padding">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.c);">
+                            3
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.f);">
+                            6
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.i);">
+                            9
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-clear button-dark" ng-click="doInput(num.k);">
+                            .
+                        </button>
+                    </div>
+                </div>
+                <div class="col-25" style="border-left:1px solid #ddd;">
+                    <div class="row row-no-padding">
+                        <button class="button button-block button-clear button-dark"
+                                ng-click="doInput(num.m);">
+                            删除
+                        </button>
+                    </div>
+                    <div class="row row-no-padding" style="border-top:1px solid #ddd;">
+                        <button class="button button-block button-energized"
+                                style="padding-top: 74px; margin-top: 0; padding-bottom: 70px; border-radius: 0;"
+                                ng-click="finishInput()">
+                            确认
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+
+
+</body>
+</html>
